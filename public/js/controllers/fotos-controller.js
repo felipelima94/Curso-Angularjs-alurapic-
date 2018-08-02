@@ -1,7 +1,6 @@
 angular.module('alurapic').controller('FotosController', function($scope, $http) {
 	
 	$scope.fotos = [];
-	$scope.foto = {};
 	$scope.filtro = '';
 
 	$http.get('/v1/fotos')
@@ -12,9 +11,5 @@ angular.module('alurapic').controller('FotosController', function($scope, $http)
 	.error(function(erro) {
 		console.log(erro);
 	});
-
-	$scope.submeter = () => {
-		console.log($scope.foto);
-	}
 
 });
